@@ -1,0 +1,24 @@
+{#{% load staticfiles %}#}
+<!DOCTYPE html>
+<html>
+<head>
+{#        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>#}
+{#        <script src="{% static 'js/cards.js' %}"></script>#}
+{#        <link rel="stylesheet" type="text/css" href="{% static 'css/cards.css' %}">#}
+
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+
+<body>
+    <div>
+        {% include 'includes/header_nav.html' %}
+    </div>
+
+    <h1>News Room!</h1>
+
+    {% block content %}
+
+    {% endblock content %}
+
+</body>
+</html>
