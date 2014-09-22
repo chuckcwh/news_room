@@ -2,19 +2,28 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'news_room.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'news.views.home', name='home'),
-    url(r'^faq/$', 'news.views.faq', name='faq'),
-    url(r'^category/$', 'news.views.category', name='category'),
-    url(r'^news/$', 'news.views.news', name='news'),
     url(r'^profile/$', 'news.views.profile', name='profile'),
+    url(r'^faq/$', 'news.views.faq', name='faq'),
+    url(r'^news/$', 'news.views.news', name='news'),
+    url(r'^add_news/$', 'news.views.add_news', name='add_news'),
+    url(r'^search_news/$', 'news.views.search_news', name='search_news'),
+    url(r'^news/(?P<news_id>\w+)/edit/$', 'news.views.edit_news', name='edit_news'),
+    url(r'^news/(?P<news_id>\w+)/delete/$', 'news.views.delete_news', name='delete_news'),
+
     # url(r'^posts/$', 'news.views.posts', name='posts'),
     # url(r'^posts_add/$', 'news.views.posts_add', name='posts_add'),
     # url(r'^comments_add/$', 'news.views.comments_add', name='comments_add'),
+
+    url(r'^north_america/$', 'news.views.north_america', name='north_america'),
+    url(r'^south_america/$', 'news.views.south_america', name='south_america'),
+    url(r'^asia/$', 'news.views.asia', name='asia'),
+    url(r'^europe/$', 'news.views.europe', name='europe'),
+    url(r'^africa/$', 'news.views.africa', name='africa'),
+    url(r'^australia/$', 'news.views.australia', name='australia'),
+
 
     url(r'^register/$', 'news.views.register', name='register'),
     url(r'^login/$', 'django.contrib.auth.views.login', name='login'),

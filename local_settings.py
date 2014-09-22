@@ -2,6 +2,6 @@
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'movie',
+        'NAME': 'news_room',
     }
 }

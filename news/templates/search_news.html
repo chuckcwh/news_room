@@ -1,0 +1,23 @@
+{% extends 'base_template.html' %}
+{% block title %}
+    search news
+{% endblock title %}
+
+
+
+{% block content %}
+    <h1>Search News Result</h1>
+    <hr>
+    {% include 'includes/categories.html' %}
+
+    {% for post in found_entries %}
+        <h3>Topic: {{ post.title }} {{ post.get_category_display }} </h3>
+        <p>Content: {{ post.news_text }}</p>
+        <p>Source: {{ post.url }}</p>
+        <p>editor: {{ post.user }}</p>
+        <a href="{% url "edit_news" post.id %}">[ Edit News ] </a>
+        <a href="{% url "delete_news" post.id %}"> [ Delete News ] </a>
+
+    {% endfor %}
+
+{% endblock content %}

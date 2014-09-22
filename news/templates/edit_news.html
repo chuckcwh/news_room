@@ -1,0 +1,23 @@
+{% extends 'base_template.html' %}
+{% block title %}
+    edit news
+{% endblock title %}
+
+
+
+{% block content %}
+    <h1>Edit news </h1>
+    <hr>
+
+
+    <form method="POST">
+        {% csrf_token %}
+        {% for field in form %}
+            <li>{{ field.label_tag | lower }}{{ field }}</li>
+        {% endfor %}
+        <input type="submit" value="Edit News" />
+    </form>
+
+    <br>
+    <hr>
+{% endblock content %}

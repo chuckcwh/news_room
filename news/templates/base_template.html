@@ -1,10 +1,10 @@
-{#{% load staticfiles %}#}
+{% load staticfiles %}
 <!DOCTYPE html>
 <html>
 <head>
 {#        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>#}
 {#        <script src="{% static 'js/cards.js' %}"></script>#}
-{#        <link rel="stylesheet" type="text/css" href="{% static 'css/cards.css' %}">#}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
 
     <title>{% block title %}{% endblock title %}</title>
 </head>
@@ -14,8 +14,8 @@
         {% include 'includes/header_nav.html' %}
     </div>
 
-    <h1>News Room!</h1>
-
+    <h1 class="one">News Room!</h1>
+    <hr>
     {% block content %}
 
     {% endblock content %}

@@ -6,7 +6,14 @@
 
 
 {% block content %}
+
     <h1>Profile</h1>
-    <p>Hello, {{ user.username }}</p>
-    <p>Your email address is {{ user.email }}</p>
+    <hr>
+    <h3>Hello, {{ user.username }}, good to see you again!</h3>
+    <p>First Name: {{ user.first_name }}</p>
+    <p>Last Name: {{ user.last_name }}</p>
+    <p>Email: {{ user.email }}</p>
+    <p>Registered at: {{ user.date_joined }}</p>
+    <p>Last log-in at: {{ user.last_login }}</p>
+
 {% endblock content %}

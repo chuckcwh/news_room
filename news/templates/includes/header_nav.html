@@ -1,9 +1,22 @@
-   <a href="{% url 'faq' %}">FAQ</a>
- | <a href="{% url 'category' %}">Categories</a>
+<a href="{% url 'profile' %}">Profile</a>
+ | <a href="{% url 'faq' %}">FAQ</a>
  | <a href="{% url 'news' %}">News</a>
+ | <a href="{% url 'add_news' %}">Add News</a>
+
+
+<div>
+<form method="get" action="/search_news/">
+
+<label for="id_q">Search:</label>
+           <input type="text" name="q" id="id_q"/>
+           <input type="submit" value="Submit"/>
+        </form>
+</div>
+
+
 <span style="float:right;">
     {% if user.is_authenticated %}
-        <span>Hi~ <a href="{% url 'profile' %}">{{ user.username }}!</a></span> |
+        <span>Hi~<a href="{% url 'profile' %}">{{ user.username }}!</a></span> |
         <a href="{% url 'logout' %}">Logout</a>
         {% if user.is_staff %}
             <a href="/admin">Admin</a>
