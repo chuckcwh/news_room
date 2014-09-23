@@ -1,4 +1,5 @@
 {% extends 'base_template.html' %}
+{% load staticfiles %}
 {% block title %}
     news
 {% endblock title %}
@@ -6,16 +7,5 @@
 
 
 {% block content %}
-    {% include 'includes/categories.html' %}
-
-    {% for post in news %}
-        <h3>Topic: {{ post.title }} [{{ post.category }}]</h3>
-        <p>Content: {{ post.news_text }}</p>
-        <p>Source: {{ post.url }}</p>
-        <p>editor: {{ post.user }}</p>
-        <a href="{% url "edit_news" post.id %}">[ Edit News ] </a>
-        <a href="{% url "delete_news" post.id %}"> [ Delete News ] </a>
-
-    {% endfor %}
-
+    {% include 'includes/news_layout.html' %}
 {% endblock content %}

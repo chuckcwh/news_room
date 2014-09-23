@@ -26,3 +26,15 @@ width: 100%;
     color: #E0E0E0 ;
     text-shadow: 5px 5px 5px #0099FF;
 }
+
+#world_camera {
+    width: 100%;
+}
+
+#lg-menu {
+    background-color: lightgrey;
+}
+
+#profile {
+    font-size: 24px;
+}

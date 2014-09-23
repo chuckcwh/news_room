@@ -6,14 +6,38 @@
 
 
 {% block content %}
-
     <h1>Profile</h1>
     <hr>
-    <h3>Hello, {{ user.username }}, good to see you again!</h3>
-    <p>First Name: {{ user.first_name }}</p>
-    <p>Last Name: {{ user.last_name }}</p>
-    <p>Email: {{ user.email }}</p>
-    <p>Registered at: {{ user.date_joined }}</p>
-    <p>Last log-in at: {{ user.last_login }}</p>
+       <div class="padding">
+        <div class="full col-sm-9">
+
+            <!-- content -->
+            <div class="row">
+
+             <!-- main col left -->
+            <div class="col-sm-1">
+            </div>
+
+              <!-- main col right -->
+              <div class="col-sm-11">
+
+                   <div class="panel panel-default">
+                     <div class="panel-heading"> Hi ~ <span id="profile"> {{ user.username }} </span>, good to see you again!</div>
+                      <div class="panel-body">
+                        <p><b>First Name: </b>{{ user.first_name }}</p>
+                        <p><b>Last Name:</b> {{ user.last_name }}</p>
+                        <p><b>Email: </b> {{ user.email }}</p>
+                        <div class="clearfix"></div>
+                        <hr>
+                          Registered at: {{ user.date_joined }}
+                          Last log-in at: {{ user.last_login }}
+
+                      </div>
+                   </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
 
 {% endblock content %}

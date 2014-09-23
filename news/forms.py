@@ -40,7 +40,7 @@ class NewsForm(forms.ModelForm):
 
     class Meta:
         model = News
-        fields = ("category", "url", "title", "news_text")
+        fields = ("category", "title", "news_text", "url")
 
 # class CommentForm(forms.Form):
 #     comment_text = forms.CharField(required=True)

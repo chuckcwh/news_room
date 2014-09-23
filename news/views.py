@@ -100,7 +100,7 @@ def search_news(request):
             print entry.category
             print entry.get_category_display()
 
-    return render_to_response("search_news.html", { 'query_string': query_string, 'found_entries': found_entries }, context_instance=RequestContext(request))
+    return render_to_response("search_news.html", { 'query_string': query_string, 'news': found_entries }, context_instance=RequestContext(request))
 
 def register(request):
     if request.method == 'POST':
