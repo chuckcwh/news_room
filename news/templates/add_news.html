@@ -9,56 +9,13 @@
     <h1>Add news</h1>
     <hr>
 
-<div class="padding">
-    <div class="full col-sm-9">
-
-        <!-- content -->
-        <div class="row">
-
-         <!-- main col left -->
-        <div class="col-sm-1">
-        </div>
-
-          <!-- main col right -->
-          <div class="col-sm-11">
-
-
-
-
-           <div class="panel panel-default">
-
-              <form method="POST">
-                {% csrf_token %}
-                {% for field in form %}
-
-                 <div class="panel-heading"> <h4>{{ field.category | lower }}{{ field }}</h4><p>{{ field.title | lower }}{{ field }}</p></div>
-                  <div class="panel-body">
-                    <p><img src="//placehold.it/150x150" class="img-circle pull-right"> {{ field.news_text | lower }}{{ field }}</p>
-                    <div class="clearfix"></div>
-                    <hr>
-                        <span class="pull-right"> editor: {{ post.user }}</span>
-                        <p><b> Source: </b> {{ field.url | lower }}{{ field }}</p>
-                    {% endfor %}
-                    <input type="submit" value="Submit News" />
-                  </div>
-
-               </form>
-           </div>
-          </div>
-        </div>
-    </div>
-</div>
-
-
-
-
-{#    <form method="POST">#}
-{#        {% csrf_token %}#}
-{#        {% for field in form %}#}
-{#            <li>{{ field.label_tag | lower }}{{ field }}</li>#}
-{#        {% endfor %}#}
-{#        <input type="submit" value="Submit News" />#}
-{#    </form>#}
+    <form method="POST">
+        {% csrf_token %}
+        {% for field in form %}
+            <li>{{ field.label_tag | lower }}{{ field }}</li>
+        {% endfor %}
+        <input type="submit" value="Submit News" />
+    </form>
 
     <br>
     <hr>

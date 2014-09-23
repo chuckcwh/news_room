@@ -22,15 +22,15 @@
               <div class="col-sm-11">
 
                    <div class="panel panel-default">
-                     <div class="panel-heading"> Hi ~ <span id="profile"> {{ user.username }} </span>, good to see you again!</div>
+                     <div class="panel-heading"> <span id="profile"> {{ user.username }} </span>, good to see you again!</div>
                       <div class="panel-body">
                         <p><b>First Name: </b>{{ user.first_name }}</p>
                         <p><b>Last Name:</b> {{ user.last_name }}</p>
                         <p><b>Email: </b> {{ user.email }}</p>
                         <div class="clearfix"></div>
                         <hr>
-                          Registered at: {{ user.date_joined }}
-                          Last log-in at: {{ user.last_login }}
+                        <p>Registered at: {{ user.date_joined }}</p>
+                        <p>Last log-in at: {{ user.last_login }}</p>
 
                       </div>
                    </div>
