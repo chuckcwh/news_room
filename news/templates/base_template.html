@@ -16,14 +16,11 @@
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
 
 
-        {% include 'includes/header_nav.html' %}
+    {% include 'includes/header_nav.html' %}
 
 
-    <h1 class="one">News Room!</h1>
-    <hr>
-    {% block content %}
+    {% block content %}{% endblock content %}
 
-    {% endblock content %}
 
 </body>
 </html>
