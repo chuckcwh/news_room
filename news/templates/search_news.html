@@ -11,7 +11,7 @@
     {% include 'includes/categories.html' %}
 
     {% for post in found_entries %}
-        <h3>Topic: {{ post.title }} {{ post.get_category_display }} </h3>
+        <h3>Topic: {{ post.title }} [{{ post.get_category_display }}] </h3>
         <p>Content: {{ post.news_text }}</p>
         <p>Source: {{ post.url }}</p>
         <p>editor: {{ post.user }}</p>
